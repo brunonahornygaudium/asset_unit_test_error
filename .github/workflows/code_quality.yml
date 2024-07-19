@@ -1,6 +1,6 @@
 name: Qualidade de código - App
 
-on: pull_request
+on: push
 
 defaults:
   run:
