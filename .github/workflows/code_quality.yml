@@ -40,4 +40,4 @@ jobs:
 
       # Runs unit test
       - name: Run tests
-        run: flutter test --coverage
+        run: flutter test 
