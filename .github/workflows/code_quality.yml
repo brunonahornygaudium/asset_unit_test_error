@@ -40,5 +40,7 @@ jobs:
 
       # Runs unit test
       - name: Run tests
-        working-directory: app
-        run: flutter test --coverage
+        run: |
+          cd app
+          flutter pub get
+          flutter test --coverage
