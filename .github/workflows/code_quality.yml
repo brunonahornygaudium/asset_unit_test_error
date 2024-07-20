@@ -40,4 +40,7 @@ jobs:
 
       # Runs unit test
       - name: Run tests
-        run: flutter test --coverage --no-test-assets
+        working-directory: .
+        run: |
+          cd ./app
+          flutter test --coverage --no-test-assets
