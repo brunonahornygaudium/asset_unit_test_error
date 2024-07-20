@@ -2,10 +2,6 @@ name: Qualidade de código - App
 
 on: push
 
-defaults:
-  run:
-    working-directory: ./app
-
 jobs:
   passageiro_code_qualiy:
     runs-on: ubuntu-latest
@@ -22,25 +18,28 @@ jobs:
       
       # Prints Flutter version to the console
       - name: Verify Flutter version
+        working-directory: ./app
         run: flutter --version
       
       # Get pub dependencies
       - name: Install dependencies
+        working-directory: ./app
         run: |
           flutter clean
           flutter pub get
 
       # Verifies if the dart code is formatted well
       - name: Verify formatting
+        working-directory: ./app
         run: dart format --output=none --set-exit-if-changed .
 
       # Checks for syntactic errors
       - name: Flutter Syntactic Code Analysis
+        working-directory: ./app
         run: flutter analyze --fatal-infos 
 
       # Runs unit test
       - name: Run tests
-        working-directory: .
         run: |
           cd ./app
           flutter test --coverage
