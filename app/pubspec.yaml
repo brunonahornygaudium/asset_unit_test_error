@@ -77,9 +77,9 @@ flutter:
   fonts:
     - family: SourceSansPro
       fonts:
-        - asset: assets/fonts/SourceSansPro-Regular.otf
+        - asset: assets\fonts\SourceSansPro-Regular.otf
           weight: 400
-        - asset: assets/fonts/SourceSansPro-SemiBold.otf
+        - asset: assets\fonts\SourceSansPro-SemiBold.otf
           weight: 600
   #
   # For details regarding fonts from package dependencies,
