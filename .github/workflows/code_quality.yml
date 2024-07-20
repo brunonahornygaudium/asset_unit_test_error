@@ -43,4 +43,4 @@ jobs:
         working-directory: .
         run: |
           cd ./app
-          flutter test --coverage --no-test-assets
+          flutter test --coverage
